@@ -45,7 +45,7 @@ def make_text(chains):
 
     key = choice(chains.keys())
     words = [key[0], key[1]]  #index[0] calls the tuple, index[1] calls the second item in the tuple in the list
-    count = len(key[0], key[1])
+    count = len(key[0], key[1]) #length of first element at the second item
 
     while key in chains:
         # Keep looping until we have a key that isn't in the chains
