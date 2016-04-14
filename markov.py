@@ -44,7 +44,9 @@ def make_text(chains):
     """Takes dictionary of markov chains; returns random text."""
 
     key = choice(chains.keys())
-    words = [key[0], key[1]]
+    words = [key[0], key[1]]  #index[0] calls the tuple, index[1] calls the second item in the tuple in the list
+    count = len(key[0], key[1])
+
     while key in chains:
         # Keep looping until we have a key that isn't in the chains
         # (which would mean it was the end of our original text)
@@ -56,6 +58,12 @@ def make_text(chains):
         words.append(word)
         key = (key[1], word)
 
+        count += words + 1
+        if count > 140:
+            print words 
+        else:
+            continue
+            
     return " ".join(words)
 
 
